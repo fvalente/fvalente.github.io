@@ -1,4 +1,6 @@
- Trumpet Master — Privacy Policy
+---
+title: Trumpet Master — Privacy Policy
+---
 
 _Last updated: April 28, 2026_
 
