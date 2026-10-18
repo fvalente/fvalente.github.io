@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoudPixels — Privacy Policy | Politique de confidentialité — PonderByte</title>
+  <meta name="description" content="LoudPixels Privacy Policy: 100% local volume-coaching utility for Windows. Zero audio recording, zero personal data collection, zero cloud or internet telemetry." />
+  <link rel="icon" type="image/png" href="/loudpixels/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-void: #05070b;
+      --bg-card: rgba(12, 17, 27, 0.88);
+      --border-dim: rgba(56, 217, 137, 0.22);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-amber: rgba(245, 166, 35, 0.34);
+      --text-main: #e6edf5;
+      --text-muted: #9aa9bc;
+      --synapse-green: #38d989;
+      --sodium-amber: #f5a623;
+      --font-display: 'Bebas Neue', Impact, sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-void);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--synapse-green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(5, 7, 11, 0.88);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .topbar-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+    }
+    .brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.25rem 0.6rem;
+      cursor: pointer;
+    }
+    .lang-btn.active {
+      background: var(--synapse-green);
+      color: #041009;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    .badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--sodium-amber);
+      border: 1px solid var(--border-amber);
+      background: rgba(245, 166, 35, 0.08);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.08em;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      letter-spacing: 0.03em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .meta {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .summary-box {
+      background: rgba(56, 217, 137, 0.07);
+      border: 1px solid var(--border-dim);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 1.8rem;
+      margin-bottom: 1.25rem;
+    }
+    h2 {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--sodium-amber);
+      margin-bottom: 0.65rem;
+      letter-spacing: 0.04em;
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.65rem;
+    }
+    p strong, li strong { color: var(--text-main); }
+    ul { padding-left: 1.25rem; }
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.12rem 0.38rem;
+      border-radius: 4px;
+    }
+    .lang-section[data-section="fr"] { display: none; }
+    html[data-lang="fr"] .lang-section[data-section="en"] { display: none; }
+    html[data-lang="fr"] .lang-section[data-section="fr"] { display: block; }
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="/loudpixels/" class="brand">
+        <img src="/loudpixels/logo.png" alt="LoudPixels" />
+        <span>LOUDPIXELS // PRIVACY</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="/loudpixels/" style="font-family: var(--font-mono); font-size: 0.75rem;">← LoudPixels</a>
+        <div class="lang-switch" role="group" aria-label="Language selector">
+          <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ENGLISH -->
+    <div class="lang-section" data-section="en">
+      <div class="badge">ZERO CLOUD · ZERO AUDIO RECORDING · 100% LOCAL</div>
+      <h1>LOUDPIXELS PRIVACY POLICY</h1>
+      <div class="meta">Last updated: October 2026 · Publisher: PonderByte (Frédéric Valente)</div>
+
+      <div class="summary-box">
+        <strong>Summary:</strong> LoudPixels does <strong>not</strong> collect, store, transmit, or share any personal data over the internet. Everything happens locally on your computer and your local home network.
+      </div>
+
+      <div class="card">
+        <h2>1. Microphone Access</h2>
+        <p>LoudPixels reads the active microphone's audio stream in real time solely to compute an instantaneous loudness level (in dBFS).</p>
+        <ul>
+          <li><strong>No audio is ever recorded, saved to disk, or transmitted anywhere</strong> (neither to the internet nor to the local smartphone remote).</li>
+          <li>Each ~10 ms audio buffer is reduced to a single number (RMS loudness) in memory and immediately discarded.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>2. Local Data Stored on Your PC</h2>
+        <p>LoudPixels stores the following files locally on your PC inside <code>C:\ProgramData\LoudPixels\</code>:</p>
+        <ul>
+          <li><code>config.json</code> — Your chosen sensitivity setting and a salted cryptographic hash (PBKDF2-HMAC-SHA256) of the parent password. The plain-text password is never stored.</li>
+          <li><code>stats\YYYY-MM-DD.csv</code> — Anonymous per-minute loudness summaries (average and peak dB) for the last 7 days, used only to draw the "This week" chart in the Parent Panel. Older files are automatically deleted.</li>
+          <li><code>agent.log</code> / <code>service.log</code> — Technical diagnostic logs (startup/shutdown events, error codes). Contains no personal information or audio content.</li>
+        </ul>
+        <p>Uninstalling LoudPixels gives you the option to delete all of these files.</p>
+      </div>
+
+      <div class="card">
+        <h2>3. Local Wi-Fi Smartphone Remote &amp; Zero Internet Traffic</h2>
+        <ul>
+          <li><strong>Zero Internet / Cloud Connections:</strong> LoudPixels makes <strong>no</strong> outbound connections to the internet, cloud servers, analytics services, or third parties. There are no accounts, no telemetry, no crash reporters, and no automatic update checks.</li>
+          <li><strong>Local Home Wi-Fi Remote Control (TCP Port 8765):</strong> LoudPixels runs a lightweight HTTP server on local TCP port <code>8765</code> (restricted to Windows <code>Private</code> network profiles) so a parent on the same home Wi-Fi network can open <code>http://&lt;PC-LAN-IP&gt;:8765</code> on their smartphone to view the current dB level and adjust sensitivity.</li>
+          <li><strong>Password Authentication:</strong> All smartphone remote actions and status queries require authenticating with the parent password (verified locally against the PBKDF2-HMAC-SHA256 hash using a temporary random session token in memory, protected by per-IP rate limiting). Only the numeric dB level and sensitivity state are exchanged over your home LAN—never audio.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. Children's Privacy (COPPA / GDPR-K)</h2>
+        <p>LoudPixels is designed for households with children and collects <strong>zero information</strong> from or about children (or anyone else).</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Contact</h2>
+        <p>For any question about this policy, contact: <strong><a href="mailto:frederic.valente@gmail.com">frederic.valente@gmail.com</a></strong> · <a href="https://ponderbyte.com">ponderbyte.com</a></p>
+      </div>
+    </div>
+
+    <!-- FRENCH -->
+    <div class="lang-section" data-section="fr">
+      <div class="badge">ZÉRO CLOUD · ZÉRO ENREGISTREMENT AUDIO · 100% LOCAL</div>
+      <h1>POLITIQUE DE CONFIDENTIALITÉ — LOUDPIXELS</h1>
+      <div class="meta">Dernière mise à jour : Octobre 2026 · Éditeur : PonderByte (Frédéric Valente)</div>
+
+      <div class="summary-box">
+        <strong>En bref :</strong> LoudPixels ne collecte, ne stocke, ne transmet et ne partage <strong>aucune</strong> donnée personnelle sur Internet. Tout se passe localement sur votre ordinateur et votre réseau local domestique.
+      </div>
+
+      <div class="card">
+        <h2>1. Accès au microphone</h2>
+        <p>LoudPixels lit le flux du microphone en temps réel uniquement pour calculer un niveau sonore instantané (en dBFS).</p>
+        <ul>
+          <li><strong>Aucun son n'est jamais enregistré, sauvegardé sur disque ou transmis où que ce soit</strong> (ni sur Internet, ni vers la télécommande smartphone).</li>
+          <li>Chaque bloc audio (~10 ms) est réduit en mémoire à un seul chiffre (volume RMS) puis immédiatement effacé.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>2. Données stockées localement sur le PC</h2>
+        <p>LoudPixels enregistre uniquement les fichiers suivants sur votre PC dans <code>C:\ProgramData\LoudPixels\</code> :</p>
+        <ul>
+          <li><code>config.json</code> — Votre réglage de sensibilité et une empreinte cryptographique salée (PBKDF2-HMAC-SHA256) du mot de passe parent. Le mot de passe en clair n'est jamais stocké.</li>
+          <li><code>stats\YYYY-MM-DD.csv</code> — Résumé anonyme par minute du niveau sonore (moyenne et pic en dB) sur les 7 derniers jours, utilisé uniquement pour afficher l'histogramme « Cette semaine » dans le Panneau parent. Les fichiers plus anciens sont supprimés automatiquement.</li>
+          <li><code>agent.log</code> / <code>service.log</code> — Journaux techniques de diagnostic, sans donnée personnelle ni contenu audio.</li>
+        </ul>
+        <p>La désinstallation de LoudPixels vous propose de supprimer l'ensemble de ces fichiers.</p>
+      </div>
+
+      <div class="card">
+        <h2>3. Télécommande Wi-Fi locale &amp; Zéro connexion Internet</h2>
+        <ul>
+          <li><strong>Aucune connexion Internet / Cloud :</strong> LoudPixels n'effectue <strong>aucune</strong> connexion vers Internet, des serveurs cloud ou des services d'analyse. Il n'y a ni compte utilisateur, ni télémétrie, ni publicité.</li>
+          <li><strong>Télécommande locale sur le Wi-Fi familial (Port TCP 8765) :</strong> LoudPixels inclut un serveur HTTP local sur le port TCP <code>8765</code> (limité au profil réseau <code>Privé</code> de Windows) permettant au parent, connecté au même réseau Wi-Fi domestique, d'ouvrir <code>http://&lt;IP-LOCALE-PC&gt;:8765</code> sur son smartphone pour consulter le niveau en dB et régler la sensibilité.</li>
+          <li><strong>Authentification par mot de passe :</strong> L'accès à la télécommande smartphone nécessite le mot de passe parent (vérifié localement via PBKDF2-HMAC-SHA256 avec limitation des tentatives par adresse IP). Seuls le niveau numérique en dB et l'état de sensibilité transitent sur votre réseau local — jamais de flux audio.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. Protection des enfants (COPPA / RGPD)</h2>
+        <p>LoudPixels est conçu pour un usage familial et ne collecte <strong>aucune information</strong> sur les enfants ou les adultes.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Contact</h2>
+        <p>Pour toute question relative à cette politique : <strong><a href="mailto:frederic.valente@gmail.com">frederic.valente@gmail.com</a></strong> · <a href="https://ponderbyte.com">ponderbyte.com</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 PONDERBYTE · FRÉDÉRIC VALENTE · <a href="https://ponderbyte.com">ponderbyte.com</a>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('data-lang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    }
+    if (navigator.language && navigator.language.toLowerCase().startsWith('fr')) {
+      setLang('fr');
+    }
+  </script>
+</body>
+</html>
