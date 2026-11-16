@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LoudPixels — Privacy Policy | Politique de confidentialité — PonderByte</title>
   <meta name="description" content="LoudPixels Privacy Policy: 100% local volume-coaching utility for Windows. Zero audio recording, zero personal data collection, zero cloud or internet telemetry." />
-  <link rel="icon" type="image/png" href="/loudpixels/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -165,12 +164,11 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <a href="/loudpixels/" class="brand">
-        <img src="/loudpixels/logo.png" alt="LoudPixels" />
+      <a href="https://ponderbyte.com" class="brand">
         <span>LOUDPIXELS // PRIVACY</span>
       </a>
       <div style="display: flex; align-items: center; gap: 1rem;">
-        <a href="/loudpixels/" style="font-family: var(--font-mono); font-size: 0.75rem;">← LoudPixels</a>
+        <a href="https://ponderbyte.com" style="font-family: var(--font-mono); font-size: 0.75rem;">← PonderByte</a>
         <div class="lang-switch" role="group" aria-label="Language selector">
           <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
           <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
@@ -184,7 +182,7 @@
     <div class="lang-section" data-section="en">
       <div class="badge">ZERO CLOUD · ZERO AUDIO RECORDING · 100% LOCAL</div>
       <h1>LOUDPIXELS PRIVACY POLICY</h1>
-      <div class="meta">Last updated: October 2026 · Publisher: PonderByte (Frédéric Valente)</div>
+      <div class="meta">Last updated: November 2026 · Publisher: PonderByte (Frédéric Valente)</div>
 
       <div class="summary-box">
         <strong>Summary:</strong> LoudPixels does <strong>not</strong> collect, store, transmit, or share any personal data over the internet. Everything happens locally on your computer and your local home network.
@@ -196,6 +194,7 @@
         <ul>
           <li><strong>No audio is ever recorded, saved to disk, or transmitted anywhere</strong> (neither to the internet nor to the local smartphone remote).</li>
           <li>Each ~10 ms audio buffer is reduced to a single number (RMS loudness) in memory and immediately discarded.</li>
+          <li>LoudPixels also notices when the microphone has been muted or switched off. To tell a game from a video call, it checks whether a full-screen program is in the foreground and whether another program is using the microphone. These checks are used in the moment and are <strong>not</strong> written down.</li>
         </ul>
       </div>
 
@@ -203,18 +202,18 @@
         <h2>2. Local Data Stored on Your PC</h2>
         <p>LoudPixels stores the following files locally on your PC inside <code>C:\ProgramData\LoudPixels\</code>:</p>
         <ul>
-          <li><code>config.json</code> — Your chosen sensitivity setting and a salted cryptographic hash (PBKDF2-HMAC-SHA256) of the parent password. The plain-text password is never stored.</li>
-          <li><code>stats\YYYY-MM-DD.csv</code> — Anonymous per-minute loudness summaries (average and peak dB) for the last 7 days, used only to draw the "This week" chart in the Parent Panel. Older files are automatically deleted.</li>
-          <li><code>agent.log</code> / <code>service.log</code> — Technical diagnostic logs (startup/shutdown events, error codes). Contains no personal information or audio content.</li>
+          <li><code>config.json</code> — Your settings and a salted cryptographic hash (PBKDF2-HMAC-SHA256) of the parent password. The plain-text password is never stored.</li>
+          <li><code>stats\YYYY-MM-DD.jsonl</code> — One line of numbers per minute: the peak level in dB, how many loud moments, how many seconds were over the limit, and how many seconds the microphone was switched off. The Parent Panel reads the last 7 days to draw its chart. No audio.</li>
+          <li><code>integrity.jsonl</code> — When the microphone is switched off and back on: the time, how long it lasted, and a short label such as <code>muted</code> or <code>device_disabled</code>. Never a program name, a window title, a device name, or any audio.</li>
         </ul>
-        <p>Uninstalling LoudPixels gives you the option to delete all of these files.</p>
+        <p>These files stay on the PC until they are deleted. The installer version offers to delete all of them when it is uninstalled. The Microsoft Store version leaves the folder in place when the app is removed; it can be deleted by hand.</p>
       </div>
 
       <div class="card">
         <h2>3. Local Wi-Fi Smartphone Remote &amp; Zero Internet Traffic</h2>
         <ul>
           <li><strong>Zero Internet / Cloud Connections:</strong> LoudPixels makes <strong>no</strong> outbound connections to the internet, cloud servers, analytics services, or third parties. There are no accounts, no telemetry, no crash reporters, and no automatic update checks.</li>
-          <li><strong>Local Home Wi-Fi Remote Control (TCP Port 8765):</strong> LoudPixels runs a lightweight HTTP server on local TCP port <code>8765</code> (restricted to Windows <code>Private</code> network profiles) so a parent on the same home Wi-Fi network can open <code>http://&lt;PC-LAN-IP&gt;:8765</code> on their smartphone to view the current dB level and adjust sensitivity.</li>
+          <li><strong>Local Home Wi-Fi Remote Control (TCP Port 8765):</strong> LoudPixels runs a lightweight HTTP server on local TCP port <code>8765</code> (it answers only devices that have a private, local-network address, and refuses any other) so a parent on the same home Wi-Fi network can open <code>http://&lt;PC-LAN-IP&gt;:8765</code> on their smartphone to view the current dB level and adjust sensitivity.</li>
           <li><strong>Password Authentication:</strong> All smartphone remote actions and status queries require authenticating with the parent password (verified locally against the PBKDF2-HMAC-SHA256 hash using a temporary random session token in memory, protected by per-IP rate limiting). Only the numeric dB level and sensitivity state are exchanged over your home LAN—never audio.</li>
         </ul>
       </div>
@@ -234,7 +233,7 @@
     <div class="lang-section" data-section="fr">
       <div class="badge">ZÉRO CLOUD · ZÉRO ENREGISTREMENT AUDIO · 100% LOCAL</div>
       <h1>POLITIQUE DE CONFIDENTIALITÉ — LOUDPIXELS</h1>
-      <div class="meta">Dernière mise à jour : Octobre 2026 · Éditeur : PonderByte (Frédéric Valente)</div>
+      <div class="meta">Dernière mise à jour : Novembre 2026 · Éditeur : PonderByte (Frédéric Valente)</div>
 
       <div class="summary-box">
         <strong>En bref :</strong> LoudPixels ne collecte, ne stocke, ne transmet et ne partage <strong>aucune</strong> donnée personnelle sur Internet. Tout se passe localement sur votre ordinateur et votre réseau local domestique.
@@ -246,6 +245,7 @@
         <ul>
           <li><strong>Aucun son n'est jamais enregistré, sauvegardé sur disque ou transmis où que ce soit</strong> (ni sur Internet, ni vers la télécommande smartphone).</li>
           <li>Chaque bloc audio (~10 ms) est réduit en mémoire à un seul chiffre (volume RMS) puis immédiatement effacé.</li>
+          <li>LoudPixels remarque aussi quand le micro a été coupé ou désactivé. Pour distinguer un jeu d'un appel visio, il regarde si un programme est en plein écran au premier plan et si un autre programme utilise le micro. Ces observations servent sur le moment et ne sont <strong>pas</strong> enregistrées.</li>
         </ul>
       </div>
 
@@ -253,18 +253,18 @@
         <h2>2. Données stockées localement sur le PC</h2>
         <p>LoudPixels enregistre uniquement les fichiers suivants sur votre PC dans <code>C:\ProgramData\LoudPixels\</code> :</p>
         <ul>
-          <li><code>config.json</code> — Votre réglage de sensibilité et une empreinte cryptographique salée (PBKDF2-HMAC-SHA256) du mot de passe parent. Le mot de passe en clair n'est jamais stocké.</li>
-          <li><code>stats\YYYY-MM-DD.csv</code> — Résumé anonyme par minute du niveau sonore (moyenne et pic en dB) sur les 7 derniers jours, utilisé uniquement pour afficher l'histogramme « Cette semaine » dans le Panneau parent. Les fichiers plus anciens sont supprimés automatiquement.</li>
-          <li><code>agent.log</code> / <code>service.log</code> — Journaux techniques de diagnostic, sans donnée personnelle ni contenu audio.</li>
+          <li><code>config.json</code> — Vos réglages et une empreinte cryptographique salée (PBKDF2-HMAC-SHA256) du mot de passe parent. Le mot de passe en clair n'est jamais stocké.</li>
+          <li><code>stats\YYYY-MM-DD.jsonl</code> — Une ligne de chiffres par minute : le niveau maximal en dB, le nombre de moments trop forts, le nombre de secondes au-dessus de la limite et le nombre de secondes où le micro était coupé. Le Panneau parent lit les 7 derniers jours pour tracer son graphique. Aucun audio.</li>
+          <li><code>integrity.jsonl</code> — Quand le micro est coupé puis rétabli : l'heure, la durée, et une étiquette courte comme <code>muted</code> ou <code>device_disabled</code>. Jamais un nom de programme, un titre de fenêtre, un nom de périphérique, ni aucun audio.</li>
         </ul>
-        <p>La désinstallation de LoudPixels vous propose de supprimer l'ensemble de ces fichiers.</p>
+        <p>Ces fichiers restent sur le PC jusqu'à leur suppression. La version avec installeur propose de tous les supprimer à la désinstallation. La version Microsoft Store laisse le dossier en place quand l'application est retirée ; il peut être supprimé à la main.</p>
       </div>
 
       <div class="card">
         <h2>3. Télécommande Wi-Fi locale &amp; Zéro connexion Internet</h2>
         <ul>
           <li><strong>Aucune connexion Internet / Cloud :</strong> LoudPixels n'effectue <strong>aucune</strong> connexion vers Internet, des serveurs cloud ou des services d'analyse. Il n'y a ni compte utilisateur, ni télémétrie, ni publicité.</li>
-          <li><strong>Télécommande locale sur le Wi-Fi familial (Port TCP 8765) :</strong> LoudPixels inclut un serveur HTTP local sur le port TCP <code>8765</code> (limité au profil réseau <code>Privé</code> de Windows) permettant au parent, connecté au même réseau Wi-Fi domestique, d'ouvrir <code>http://&lt;IP-LOCALE-PC&gt;:8765</code> sur son smartphone pour consulter le niveau en dB et régler la sensibilité.</li>
+          <li><strong>Télécommande locale sur le Wi-Fi familial (Port TCP 8765) :</strong> LoudPixels inclut un serveur HTTP local sur le port TCP <code>8765</code> (il ne répond qu'aux appareils ayant une adresse de réseau local privé, et refuse tous les autres) permettant au parent, connecté au même réseau Wi-Fi domestique, d'ouvrir <code>http://&lt;IP-LOCALE-PC&gt;:8765</code> sur son smartphone pour consulter le niveau en dB et régler la sensibilité.</li>
           <li><strong>Authentification par mot de passe :</strong> L'accès à la télécommande smartphone nécessite le mot de passe parent (vérifié localement via PBKDF2-HMAC-SHA256 avec limitation des tentatives par adresse IP). Seuls le niveau numérique en dB et l'état de sensibilité transitent sur votre réseau local — jamais de flux audio.</li>
         </ul>
       </div>
