@@ -206,7 +206,7 @@
           <li><code>stats\YYYY-MM-DD.jsonl</code> — One line of numbers per minute: the peak level in dB, how many loud moments, how many seconds were over the limit, and how many seconds the microphone was switched off. The Parent Panel reads the last 7 days to draw its chart. No audio.</li>
           <li><code>integrity.jsonl</code> — When the microphone is switched off and back on: the time, how long it lasted, and a short label such as <code>muted</code> or <code>device_disabled</code>. Never a program name, a window title, a device name, or any audio.</li>
         </ul>
-        <p>These files stay on the PC until they are deleted. The installer version offers to delete all of them when it is uninstalled. The Microsoft Store version leaves the folder in place when the app is removed; it can be deleted by hand.</p>
+        <p>Each day's <code>stats</code> file is deleted automatically once it is more than 7 days old. All that is kept beyond that is <code>stats\streak.json</code>: a single date and a count of quiet days in a row. The other files stay on the PC until they are deleted. The installer version offers to delete all of them when it is uninstalled. The Microsoft Store version leaves the folder in place when the app is removed; it can be deleted by hand.</p>
       </div>
 
       <div class="card">
@@ -257,7 +257,7 @@
           <li><code>stats\YYYY-MM-DD.jsonl</code> — Une ligne de chiffres par minute : le niveau maximal en dB, le nombre de moments trop forts, le nombre de secondes au-dessus de la limite et le nombre de secondes où le micro était coupé. Le Panneau parent lit les 7 derniers jours pour tracer son graphique. Aucun audio.</li>
           <li><code>integrity.jsonl</code> — Quand le micro est coupé puis rétabli : l'heure, la durée, et une étiquette courte comme <code>muted</code> ou <code>device_disabled</code>. Jamais un nom de programme, un titre de fenêtre, un nom de périphérique, ni aucun audio.</li>
         </ul>
-        <p>Ces fichiers restent sur le PC jusqu'à leur suppression. La version avec installeur propose de tous les supprimer à la désinstallation. La version Microsoft Store laisse le dossier en place quand l'application est retirée ; il peut être supprimé à la main.</p>
+        <p>Le fichier <code>stats</code> de chaque journée est supprimé automatiquement au bout de 7 jours. Seul est conservé au-delà <code>stats\streak.json</code> : une date et un compteur de jours calmes d'affilée. Les autres fichiers restent sur le PC jusqu'à leur suppression. La version avec installeur propose de tous les supprimer à la désinstallation. La version Microsoft Store laisse le dossier en place quand l'application est retirée ; il peut être supprimé à la main.</p>
       </div>
 
       <div class="card">
